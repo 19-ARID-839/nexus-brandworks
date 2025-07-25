@@ -29,13 +29,12 @@ const Header = () => {
             </span>
           </div> */}
           <div className="flex items-center animate-slide-in-left">
-  <img
-    src="/logo.png" // Update path to your logo
-    alt="NexusBrand Logo"
-    className="h-10 w-auto"
-  />
-</div>
-
+            <img
+              src="/logo.png" 
+              alt="NexusBrand Logo"
+             className="h-12 w-auto md:h-12"
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -54,9 +53,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block animate-slide-in-right">
-            <Button
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
-            >
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
               Get Started
             </Button>
           </div>
@@ -88,9 +85,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button
-                className="mx-4 mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
+              <Button className="mx-4 mt-4 bg-primary hover:bg-primary/90 text-primary-foreground">
                 Get Started
               </Button>
             </nav>

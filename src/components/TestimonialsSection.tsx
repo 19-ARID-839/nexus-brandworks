@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       role: "CEO, TechStart Inc.",
       company: "TechStart Inc.",
       rating: 5,
-      content: "Rox Tech transformed our vision into a stunning web application. Their attention to detail and technical expertise exceeded our expectations. The team delivered on time and within budget.",
+      content: "Rox Tech Hub  transformed our vision into a stunning web application. Their attention to detail and technical expertise exceeded our expectations. The team delivered on time and within budget.",
       avatar: "SJ"
     },
     {
@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
       role: "CTO, FinanceFlow",
       company: "FinanceFlow",
       rating: 5,
-      content: "Working with Rox Tech was a game-changer for our fintech startup. They built a secure, scalable platform that handles thousands of transactions daily. Exceptional quality and support.",
+      content: "Working with Rox Tech Hub was a game-changer for our fintech startup. They built a secure, scalable platform that handles thousands of transactions daily. Exceptional quality and support.",
       avatar: "MC"
     },
     {
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
       role: "Founder, EcoSolutions",
       company: "EcoSolutions",
       rating: 5,
-      content: "Rox Tech's AI solution automated our inventory management and saved us 40 hours per week. Their innovative approach and technical skills are unmatched in the industry.",
+      content: "Rox Tech Hub's AI solution automated our inventory management and saved us 40 hours per week. Their innovative approach and technical skills are unmatched in the industry.",
       avatar: "DT"
     },
     {

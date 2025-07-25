@@ -28,10 +28,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "Twitter", icon: Twitter, href: "https://x.com/roxtechhub" },
     { name: "LinkedIn", icon: Linkedin, href: "#" },
-    { name: "Github", icon: Github, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
+    // { name: "Github", icon: Github, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/roxtechhub?igsh=M2Q5amxpZXNzb3ox" },
   ];
 
   return (
@@ -41,12 +41,17 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
                 <Code className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Rox Tech
-              </span>
+              </span> */}
+               <img
+              src="/logo.png" 
+              alt="Roxtech Logo"
+              className="h-12 w-auto md:h-12"
+            />
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
               We're a dynamic software house passionate about creating digital solutions that transform businesses and drive innovation.
@@ -56,15 +61,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Mail className="w-4 h-4 mr-3" />
-                <span>hello@roxtech.com</span>
+                <span>hr@roxtechhub.com</span>
               </div>
               <div className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Phone className="w-4 h-4 mr-3" />
-                <span>+1 (555) 123-4567</span>
+                <span>+92 301 5599883</span>
               </div>
               <div className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300">
                 <MapPin className="w-4 h-4 mr-3" />
-                <span>123 Tech Street, Silicon Valley, CA</span>
+                <span>31 Orchard Rd, DHA Phase II, Islamabad, PK</span>
               </div>
             </div>
           </div>
@@ -129,7 +134,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
             <div className="text-muted-foreground mb-4 md:mb-0">
-              © {currentYear} Rox Tech. All rights reserved.
+              © {currentYear} Rox Tech Hub. All rights reserved.
             </div>
 
             {/* Social Links */}
@@ -142,6 +147,8 @@ const Footer = () => {
                     href={social.href}
                     className="w-10 h-10 bg-secondary/50 hover:bg-primary/20 border border-border/50 hover:border-primary/30 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                     aria-label={social.name}
+                   
+                    target="_blank"
                   >
                     <IconComponent className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
                   </a>

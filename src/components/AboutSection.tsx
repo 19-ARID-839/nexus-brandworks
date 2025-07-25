@@ -1,5 +1,6 @@
 import { Award, Users, Target, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import TeamSection from "./TeamSection";
 
 const AboutSection = () => {
   const values = [
@@ -24,6 +25,8 @@ const AboutSection = () => {
       description: "Every project undergoes rigorous testing and quality checks to ensure perfect delivery."
     }
   ];
+
+  
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-secondary/20 to-background">
@@ -115,6 +118,9 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Team member */}
+         <TeamSection/>
       </div>
     </section>
   );
