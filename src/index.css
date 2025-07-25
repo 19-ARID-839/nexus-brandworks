@@ -18,6 +18,9 @@ All colors MUST be HSL.
     --background: 220 25% 8%;
     --foreground: 210 40% 98%;
 
+    --transparent-bg: 220 25% 8% / 0;
+    --semi-transparent-bg: 220 25% 8% / 0.4;
+
     --card: 220 25% 10%;
     --card-foreground: 210 40% 98%;
 

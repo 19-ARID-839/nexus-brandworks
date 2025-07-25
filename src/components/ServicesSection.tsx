@@ -1,7 +1,9 @@
 import { Code, Smartphone, Zap, Palette, Share2, Brain } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
+   const navigate = useNavigate();
   const services = [
     {
       icon: Code,
@@ -41,6 +43,10 @@ const ServicesSection = () => {
     }
   ];
 
+    const slugify = (text: string) =>
+    text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
+
+
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,12 +63,14 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
+          const IconComponent = service.icon;
+          const slug = slugify(service.title);
             return (
               <Card
                 key={service.title}
                 className="group bg-card-gradient border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => navigate(`/services/${slug}`)}
               >
                 <CardContent className="p-8 text-center">
                   {/* Icon */}
