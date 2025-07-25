@@ -9,107 +9,117 @@ const HeroSection = () => {
     >
       {/* Interactive Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Main gradient blobs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float hover:bg-accent/30 transition-colors duration-500 cursor-pointer"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float hover:bg-primary/30 transition-colors duration-500 cursor-pointer"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float hover:bg-accent/25 transition-colors duration-500 cursor-pointer"
-          style={{ animationDelay: "2s" }}
-        ></div>
+  {/* Main gradient blobs */}
+  <div
+    className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float hover:bg-accent/30 transition-colors duration-500 cursor-pointer"
+    style={{ animationDuration: "15s" }}
+  ></div>
+  <div
+    className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float hover:bg-primary/30 transition-colors duration-500 cursor-pointer"
+    style={{ animationDelay: "1s", animationDuration: "15s" }}
+  ></div>
+  <div
+    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float hover:bg-accent/25 transition-colors duration-500 cursor-pointer"
+    style={{ animationDelay: "2s", animationDuration: "15s" }}
+  ></div>
 
-        {/* Interactive floating geometric shapes */}
-        <div
-          className="absolute top-32 right-1/4 w-8 h-8 bg-primary/30 rotate-45 animate-drift hover:bg-accent/50 hover:scale-125 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "0.5s" }}
-        ></div>
-        <div
-          className="absolute bottom-32 left-1/4 w-6 h-6 bg-accent/40 rounded-full animate-bounce-slow hover:bg-primary/60 hover:scale-150 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "1.5s" }}
-        ></div>
-        <div
-          className="absolute top-1/3 left-16 w-4 h-12 bg-primary/25 rounded-full animate-drift hover:bg-accent/45 hover:scale-110 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "2.5s" }}
-        ></div>
-        <div
-          className="absolute bottom-1/3 right-16 w-10 h-10 bg-accent/30 animate-rotate-slow hover:bg-primary/50 hover:scale-125 transition-all duration-300 cursor-pointer"
-          style={{
-            clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
-            animationDelay: "3s",
-          }}
-        ></div>
+  {/* Floating geometric shapes */}
+  <div
+    className="absolute top-32 right-1/4 w-8 h-8 bg-primary/30 rotate-45 animate-drift hover:bg-accent/50 hover:scale-125 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "0.5s", animationDuration: "20s" }}
+  ></div>
+  <div
+    className="absolute bottom-32 left-1/4 w-6 h-6 bg-accent/40 rounded-full animate-bounce-slow hover:bg-primary/60 hover:scale-150 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "1.5s", animationDuration: "8s" }}
+  ></div>
+  <div
+    className="absolute top-1/3 left-16 w-4 h-12 bg-primary/25 rounded-full animate-drift hover:bg-accent/45 hover:scale-110 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "2.5s", animationDuration: "18s" }}
+  ></div>
+  <div
+    className="absolute bottom-1/3 right-16 w-10 h-10 bg-accent/30 animate-rotate-slow hover:bg-primary/50 hover:scale-125 transition-all duration-300 cursor-pointer"
+    style={{
+      clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+      animationDelay: "3s",
+      animationDuration: "25s"
+    }}
+  ></div>
 
-        {/* Interactive orbiting elements */}
-        <div className="absolute top-1/4 left-1/3 group cursor-pointer">
-          <div className="relative w-4 h-4">
-            <div
-              className="absolute w-2 h-2 bg-primary/50 rounded-full animate-orbit group-hover:bg-accent/70 group-hover:scale-150 transition-all duration-300"
-              style={{ animationDelay: "1s" }}
-            ></div>
-          </div>
-        </div>
-        <div className="absolute bottom-1/4 right-1/3 group cursor-pointer">
-          <div className="relative w-6 h-6">
-            <div
-              className="absolute w-1 h-1 bg-accent/60 rounded-full animate-orbit group-hover:bg-primary/80 group-hover:scale-200 transition-all duration-300"
-              style={{ animationDelay: "4s", animationDirection: "reverse" }}
-            ></div>
-          </div>
-        </div>
+  {/* Orbiting elements */}
+  <div className="absolute top-1/4 left-1/3 group cursor-pointer">
+    <div className="relative w-4 h-4">
+      <div
+        className="absolute w-2 h-2 bg-primary/50 rounded-full animate-orbit group-hover:bg-accent/70 group-hover:scale-150 transition-all duration-300"
+        style={{ animationDelay: "1s", animationDuration: "12s" }}
+      ></div>
+    </div>
+  </div>
+  <div className="absolute bottom-1/4 right-1/3 group cursor-pointer">
+    <div className="relative w-6 h-6">
+      <div
+        className="absolute w-1 h-1 bg-accent/60 rounded-full animate-orbit group-hover:bg-primary/80 group-hover:scale-200 transition-all duration-300"
+        style={{
+          animationDelay: "4s",
+          animationDirection: "reverse",
+          animationDuration: "12s"
+        }}
+      ></div>
+    </div>
+  </div>
 
-        {/* Interactive particle-like elements */}
-        <div
-          className="absolute top-40 left-1/2 w-2 h-2 bg-primary/40 rounded-full animate-particle-float hover:bg-accent/60 hover:scale-150 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "0.8s" }}
-        ></div>
-        <div
-          className="absolute top-60 right-1/3 w-1 h-1 bg-accent/50 rounded-full animate-particle-float hover:bg-primary/70 hover:scale-200 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "2.2s" }}
-        ></div>
-        <div
-          className="absolute bottom-40 left-1/3 w-3 h-3 bg-primary/35 rounded-full animate-particle-float hover:bg-accent/55 hover:scale-125 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "3.5s" }}
-        ></div>
-        <div
-          className="absolute bottom-60 right-1/4 w-1 h-1 bg-accent/45 rounded-full animate-particle-float hover:bg-primary/65 hover:scale-175 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "1.8s" }}
-        ></div>
+  {/* Particle-like elements */}
+  <div
+    className="absolute top-40 left-1/2 w-2 h-2 bg-primary/40 rounded-full animate-particle-float hover:bg-accent/60 hover:scale-150 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "0.8s", animationDuration: "16s" }}
+  ></div>
+  <div
+    className="absolute top-60 right-1/3 w-1 h-1 bg-accent/50 rounded-full animate-particle-float hover:bg-primary/70 hover:scale-200 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "2.2s", animationDuration: "18s" }}
+  ></div>
+  <div
+    className="absolute bottom-40 left-1/3 w-3 h-3 bg-primary/35 rounded-full animate-particle-float hover:bg-accent/55 hover:scale-125 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "3.5s", animationDuration: "16s" }}
+  ></div>
+  <div
+    className="absolute bottom-60 right-1/4 w-1 h-1 bg-accent/45 rounded-full animate-particle-float hover:bg-primary/65 hover:scale-175 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "1.8s", animationDuration: "18s" }}
+  ></div>
 
-        {/* Interactive glowing lines */}
-        <div
-          className="absolute top-1/3 left-0 w-32 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-drift hover:via-accent/50 transition-all duration-500 cursor-pointer"
-          style={{ animationDelay: "2.8s" }}
-        ></div>
-        <div
-          className="absolute bottom-1/3 right-0 w-24 h-px bg-gradient-to-l from-transparent via-accent/40 to-transparent animate-drift hover:via-primary/60 transition-all duration-500 cursor-pointer"
-          style={{ animationDelay: "4.2s" }}
-        ></div>
+  {/* Glowing lines */}
+  <div
+    className="absolute top-1/3 left-0 w-32 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-drift hover:via-accent/50 transition-all duration-500 cursor-pointer"
+    style={{ animationDelay: "2.8s", animationDuration: "20s" }}
+  ></div>
+  <div
+    className="absolute bottom-1/3 right-0 w-24 h-px bg-gradient-to-l from-transparent via-accent/40 to-transparent animate-drift hover:via-primary/60 transition-all duration-500 cursor-pointer"
+    style={{ animationDelay: "4.2s", animationDuration: "20s" }}
+  ></div>
 
-        {/* Interactive rotating rings */}
-        <div
-          className="absolute top-1/2 left-20 w-16 h-16 border border-primary/20 rounded-full animate-rotate-slow hover:border-accent/40 hover:scale-110 transition-all duration-300 cursor-pointer"
-          style={{ animationDelay: "1.5s" }}
-        ></div>
-        <div
-          className="absolute bottom-1/4 right-20 w-12 h-12 border border-accent/25 rounded-full animate-rotate-slow hover:border-primary/45 hover:scale-125 transition-all duration-300 cursor-pointer"
-          style={{
-            animationDelay: "3.2s",
-            animationDirection: "reverse",
-          }}
-        ></div>
+  {/* Rotating rings */}
+  <div
+    className="absolute top-1/2 left-20 w-16 h-16 border border-primary/20 rounded-full animate-rotate-slow hover:border-accent/40 hover:scale-110 transition-all duration-300 cursor-pointer"
+    style={{ animationDelay: "1.5s", animationDuration: "30s" }}
+  ></div>
+  <div
+    className="absolute bottom-1/4 right-20 w-12 h-12 border border-accent/25 rounded-full animate-rotate-slow hover:border-primary/45 hover:scale-125 transition-all duration-300 cursor-pointer"
+    style={{
+      animationDelay: "3.2s",
+      animationDirection: "reverse",
+      animationDuration: "30s"
+    }}
+  ></div>
 
-        {/* Grid pattern overlay */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)",
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
-      </div>
+  {/* Grid pattern overlay */}
+  <div
+    className="absolute inset-0 opacity-10"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)",
+      backgroundSize: "50px 50px"
+    }}
+  ></div>
+</div>
+
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
