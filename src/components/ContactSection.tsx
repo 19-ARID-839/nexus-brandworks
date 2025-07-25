@@ -11,7 +11,7 @@ const ContactSection = () => {
     name: "",
     email: "",
     company: "",
-    message: ""
+    message: "",
   });
   const { toast } = useToast();
 
@@ -20,15 +20,18 @@ const ContactSection = () => {
     // Handle form submission
     toast({
       title: "Message Sent!",
-      description: "Thank you for your interest. We'll get back to you within 24 hours.",
+      description:
+        "Thank you for your interest. We'll get back to you within 24 hours.",
     });
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -36,33 +39,45 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@nexusbrand.com",
-      subtext: "We respond within 24 hours"
+      details: "hello@roxtech.com",
+      subtext: "We respond within 24 hours",
     },
     {
       icon: Phone,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      subtext: "Mon-Fri 9AM-6PM EST"
+      subtext: "Mon-Fri 9AM-6PM EST",
     },
     {
       icon: MapPin,
       title: "Visit Us",
       details: "123 Tech Street, Silicon Valley",
-      subtext: "CA 94000, United States"
-    }
+      subtext: "CA 94000, United States",
+    },
   ];
 
+  //
+
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-secondary/20 to-background">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-secondary/20 to-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Get In <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Touch</span>
+            Get In{" "}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Touch
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Ready to start your next project? Let's discuss how we can help bring your vision to life.
+          <p
+            className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Ready to start your next project? Let's discuss how we can help
+            bring your vision to life.
           </p>
         </div>
 
@@ -70,10 +85,12 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             <div className="animate-slide-in-left">
-              <h3 className="text-2xl font-bold mb-6">Let's Start a Conversation</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                Let's Start a Conversation
+              </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Whether you need a complete digital transformation or a specific solution, 
-                our team is here to help you achieve your goals.
+                Whether you need a complete digital transformation or a specific
+                solution, our team is here to help you achieve your goals.
               </p>
             </div>
 
@@ -95,8 +112,12 @@ const ContactSection = () => {
                       <h4 className="font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
                         {info.title}
                       </h4>
-                      <p className="text-foreground font-medium">{info.details}</p>
-                      <p className="text-sm text-muted-foreground">{info.subtext}</p>
+                      <p className="text-foreground font-medium">
+                        {info.details}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {info.subtext}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -104,14 +125,25 @@ const ContactSection = () => {
             })}
 
             {/* Quick Actions */}
-            <div className="animate-slide-in-left" style={{ animationDelay: "0.6s" }}>
+            <div
+              className="animate-slide-in-left"
+              style={{ animationDelay: "0.6s" }}
+            >
               <h4 className="font-semibold mb-4">Quick Actions</h4>
               <div className="space-y-3">
-                <Button variant="outline" className="w-full justify-start" size="sm">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  size="sm"
+                >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Schedule a Call
                 </Button>
-                <Button variant="outline" className="w-full justify-start" size="sm">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  size="sm"
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   Get a Quote
                 </Button>
@@ -127,7 +159,10 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Full Name *
                       </label>
                       <Input
@@ -141,7 +176,10 @@ const ContactSection = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Email Address *
                       </label>
                       <Input
@@ -158,7 +196,10 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Company Name
                     </label>
                     <Input
@@ -172,7 +213,10 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Project Details *
                     </label>
                     <Textarea

@@ -45,7 +45,7 @@ const Footer = () => {
                 <Code className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                NexusBrand
+                Rox Tech
               </span>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Mail className="w-4 h-4 mr-3" />
-                <span>hello@nexusbrand.com</span>
+                <span>hello@roxtech.com</span>
               </div>
               <div className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Phone className="w-4 h-4 mr-3" />
@@ -129,7 +129,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
             <div className="text-muted-foreground mb-4 md:mb-0">
-              © {currentYear} NexusBrand. All rights reserved.
+              © {currentYear} Rox Tech. All rights reserved.
             </div>
 
             {/* Social Links */}
