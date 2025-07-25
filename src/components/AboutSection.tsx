@@ -32,7 +32,7 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="animate-slide-in-left">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">NexusBrand</span>
+              About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Rox Tech</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               We are a dynamic software house passionate about creating digital solutions that transform businesses. 

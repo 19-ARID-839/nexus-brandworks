@@ -18,7 +18,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2 animate-slide-in-left">
+          {/* <div className="flex items-center space-x-2 animate-slide-in-left">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center animate-glow-pulse">
                 <Code className="w-6 h-6 text-primary-foreground" />
@@ -27,7 +27,15 @@ const Header = () => {
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               NexusBrand
             </span>
-          </div>
+          </div> */}
+          <div className="flex items-center animate-slide-in-left">
+  <img
+    src="/logo.png" // Update path to your logo
+    alt="NexusBrand Logo"
+    className="h-10 w-auto"
+  />
+</div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
