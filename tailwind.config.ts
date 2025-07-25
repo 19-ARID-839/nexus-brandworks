@@ -130,6 +130,57 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(100px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(100px) rotate(-360deg)'
+					}
+				},
+				'drift': {
+					'0%, 100%': {
+						transform: 'translate(0px, 0px) rotate(0deg)'
+					},
+					'33%': {
+						transform: 'translate(30px, -30px) rotate(120deg)'
+					},
+					'66%': {
+						transform: 'translate(-20px, 20px) rotate(240deg)'
+					}
+				},
+				'particle-float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) translateX(0px) scale(1)'
+					},
+					'25%': {
+						transform: 'translateY(-20px) translateX(10px) scale(1.1)'
+					},
+					'50%': {
+						transform: 'translateY(-10px) translateX(-15px) scale(0.9)'
+					},
+					'75%': {
+						transform: 'translateY(-30px) translateX(5px) scale(1.05)'
+					}
+				},
+				'rotate-slow': {
+					'from': {
+						transform: 'rotate(0deg)'
+					},
+					'to': {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0%)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(-25%)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
 				}
 			},
 			animation: {
@@ -139,7 +190,12 @@ export default {
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'orbit': 'orbit 20s linear infinite',
+				'drift': 'drift 8s ease-in-out infinite',
+				'particle-float': 'particle-float 4s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 30s linear infinite',
+				'bounce-slow': 'bounce-slow 3s infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

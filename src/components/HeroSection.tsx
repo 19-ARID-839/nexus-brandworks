@@ -5,10 +5,55 @@ const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen relative overflow-hidden bg-bg-gradient">
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Main gradient blobs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-32 right-1/4 w-8 h-8 bg-primary/30 rotate-45 animate-drift" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute bottom-32 left-1/4 w-6 h-6 bg-accent/40 rounded-full animate-bounce-slow" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute top-1/3 left-16 w-4 h-12 bg-primary/25 rounded-full animate-drift" style={{ animationDelay: "2.5s" }}></div>
+        <div className="absolute bottom-1/3 right-16 w-10 h-10 bg-accent/30 animate-rotate-slow" style={{ 
+          clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+          animationDelay: "3s" 
+        }}></div>
+        
+        {/* Orbiting elements */}
+        <div className="absolute top-1/4 left-1/3">
+          <div className="relative w-4 h-4">
+            <div className="absolute w-2 h-2 bg-primary/50 rounded-full animate-orbit" style={{ animationDelay: "1s" }}></div>
+          </div>
+        </div>
+        <div className="absolute bottom-1/4 right-1/3">
+          <div className="relative w-6 h-6">
+            <div className="absolute w-1 h-1 bg-accent/60 rounded-full animate-orbit" style={{ animationDelay: "4s", animationDirection: "reverse" }}></div>
+          </div>
+        </div>
+        
+        {/* Particle-like elements */}
+        <div className="absolute top-40 left-1/2 w-2 h-2 bg-primary/40 rounded-full animate-particle-float" style={{ animationDelay: "0.8s" }}></div>
+        <div className="absolute top-60 right-1/3 w-1 h-1 bg-accent/50 rounded-full animate-particle-float" style={{ animationDelay: "2.2s" }}></div>
+        <div className="absolute bottom-40 left-1/3 w-3 h-3 bg-primary/35 rounded-full animate-particle-float" style={{ animationDelay: "3.5s" }}></div>
+        <div className="absolute bottom-60 right-1/4 w-1 h-1 bg-accent/45 rounded-full animate-particle-float" style={{ animationDelay: "1.8s" }}></div>
+        
+        {/* Glowing lines */}
+        <div className="absolute top-1/3 left-0 w-32 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-drift" style={{ animationDelay: "2.8s" }}></div>
+        <div className="absolute bottom-1/3 right-0 w-24 h-px bg-gradient-to-l from-transparent via-accent/40 to-transparent animate-drift" style={{ animationDelay: "4.2s" }}></div>
+        
+        {/* Rotating rings */}
+        <div className="absolute top-1/2 left-20 w-16 h-16 border border-primary/20 rounded-full animate-rotate-slow" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute bottom-1/4 right-20 w-12 h-12 border border-accent/25 rounded-full animate-rotate-slow" style={{ 
+          animationDelay: "3.2s",
+          animationDirection: "reverse"
+        }}></div>
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)",
+          backgroundSize: "50px 50px"
+        }}></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
