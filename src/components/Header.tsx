@@ -1,9 +1,26 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Code, Smartphone, Zap } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      // Store the scroll target in sessionStorage so we can scroll after landing
+      sessionStorage.setItem("scrollTo", sectionId);
+    } else {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -30,15 +47,15 @@ const Header = () => {
           </div> */}
           <div className="flex items-center animate-slide-in-left">
             <img
-              src="/logo.png" 
+              src="/logo.png"
               alt="NexusBrand Logo"
-             className="h-12 w-auto md:h-12"
+              className="h-12 w-auto md:h-12"
             />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
+            {/* {navItems.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -48,13 +65,27 @@ const Header = () => {
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
-            ))}
+            ))} */}
+            {navItems.map((item, index) => (
+  <button
+    key={item.name}
+    onClick={() => handleNavClick(item.href.replace("#", ""))}
+    className="text-foreground hover:text-primary transition-colors duration-200 relative group animate-fade-in"
+    style={{ animationDelay: `${index * 0.1}s` }}
+  >
+    {item.name}
+    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+  </button>
+))}
+
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block animate-slide-in-right">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-             <a color="#ffffff" href="#services">Get Started</a>
+              <a color="#ffffff" href="#services">
+                Get Started
+              </a>
             </Button>
           </div>
 
